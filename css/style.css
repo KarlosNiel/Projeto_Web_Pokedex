@@ -1,0 +1,172 @@
+
+
+:root {
+    --primary-color: #C60B00;
+    --secondary-color: #211716
+}
+
+.bg-primary {
+    background-color: #C60B00 !important;
+}
+
+.bg-secondary {
+    background-color: #211716 !important;
+}
+
+.text-primary {
+    color: #C60B00 !important;
+}
+
+.text-secondary {
+    color: #211716 !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    background-color: var(--primary-color);
+    justify-content: space-between;
+}
+
+header section {
+    display: flex;
+    justify-content: center;
+    width: 16rem;
+    background-color: var(--secondary-color);
+}
+
+header section p {
+    margin-top: 0.625rem;
+    font-family: "inter";
+    font-weight: bold;
+    font-size: 24px;
+}
+
+header div {
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 3rem;
+}
+
+.nav_container {
+    background-color: #C60B00;
+    width: 12rem;
+    height: 6.25rem;
+    text-align: center;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.nav_container p {
+    margin-top: 1.25rem;
+    font-family: "inter";
+    font-size: 24px;
+    color: white;
+}
+
+.container_search_list {
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+}
+
+.container_search {
+    background-color: var(--primary-color);
+    width: 11.6875rem;
+    height: 3.75rem;
+    margin-top: 3rem;
+}
+
+input[type="reset"] {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-top: 3rem;
+}
+
+.container_bar_search {
+    display: flex;
+    width: 35rem;
+    height: 3.75rem;
+    margin-top: 3rem;
+    background-color: var(--primary-color);
+}
+
+.container_bar_search input[type="text"] {
+    width: 30rem;
+    height: 2.5rem;
+    margin: 10px;
+}
+
+.container_bar_search input[type="submit"] {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 10px;
+    margin-left: 5px;
+}
+
+.container_list_pokemons {
+    display: flex;
+    justify-content: center;
+
+}
+
+.container_all_pokemons {
+    display: flex;
+    width: 64rem;
+    height: auto;
+    margin-top: 3rem;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.container_pokemon {
+    border: 5px solid gray;
+    width: 15rem;
+    height: 18.75rem;
+}
+
+.container_pokemon div {
+    display: flex;
+    justify-content: center;
+    gap: 3.75rem;
+    margin-bottom: -10px;
+}
+.container_pokemon p {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container_pokemon img {
+    width: 200px;
+    height: 190px;
+    margin-left: 15px;
+}
+
+.types_in_container_pokemon {
+    display: flex;
+    justify-content: center;
+}
+
+.types_in_container_pokemon img {
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-right: -25px;
+    margin-left: -25px;
+    margin-top: 16px;
+}
