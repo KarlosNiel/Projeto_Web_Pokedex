@@ -1,8 +1,8 @@
-
-
 :root {
     --primary-color: #C60B00;
-    --secondary-color: #211716
+    --secondary-color: #211716;
+    --shadow: 4px 4px 4px rgb(0, 0, 0, 0.3);
+    --low-shadow:  1px 1px 1px rgb(0, 0, 0, 0);
 }
 
 .bg-primary {
@@ -31,28 +31,51 @@ header {
     display: flex;
     background-color: var(--primary-color);
     justify-content: space-between;
+    box-shadow: var(--shadow)
 }
 
-header section {
+header div {
     display: flex;
     justify-content: center;
     width: 16rem;
     background-color: var(--secondary-color);
 }
 
-header section p {
+header div p {
     margin-top: 0.625rem;
     font-family: "inter";
     font-weight: bold;
     font-size: 24px;
 }
 
-header div {
+header div div {
+    display: flex;
+}
+
+.dark_mode {
+    display: flex;
+    background-color: white;
     justify-content: center;
     align-items: center;
     width: 44px;
     height: 44px;
     margin: 10px;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+    transition: 1s;
+}
+
+.dark_mode:hover {
+    background-color: black;
+}
+
+.dark_mode:hover svg {
+    fill: white;
+}
+
+.dark_mode:active {
+    box-shadow: var(--low-shadow);
+    transition: -0.5s;
 }
 
 nav {
@@ -63,20 +86,32 @@ nav {
 }
 
 .nav_container {
-    background-color: #C60B00;
+    background-color: var(--primary-color);
     width: 12rem;
     height: 6.25rem;
     text-align: center;
     display: flex; 
     justify-content: center; 
     align-items: center;
+    border: 2px solid var(--primary-color);
+    box-shadow: var(--shadow);
+}
+
+.nav_container:hover {
+    background-color: white;
+    transition: 1s;
 }
 
 .nav_container p {
     margin-top: 1.25rem;
-    font-family: "inter";
-    font-size: 24px;
+    font-family: "inter", sans-serif; 
+    font-size: 26px;
+    font-weight: bold;
     color: white;
+}
+
+.nav_container:hover p {
+    color: var(--primary-color); 
 }
 
 .container_search_list {
@@ -86,17 +121,45 @@ nav {
 }
 
 .container_search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
     background-color: var(--primary-color);
     width: 11.6875rem;
     height: 3.75rem;
     margin-top: 3rem;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 
-input[type="reset"] {
+.container_search p {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+.container_search_list select {
+    font-family: "inter";
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    border: 0;
+}
+
+button[type="reset"] {
     width: 3.75rem;
     height: 3.75rem;
     margin-top: 3rem;
+    background-color: var(--secondary-color);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
 }
+
 
 .container_bar_search {
     display: flex;
@@ -104,6 +167,8 @@ input[type="reset"] {
     height: 3.75rem;
     margin-top: 3rem;
     background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: var(--shadow);
 }
 
 .container_bar_search input[type="text"] {
@@ -112,11 +177,24 @@ input[type="reset"] {
     margin: 10px;
 }
 
-.container_bar_search input[type="submit"] {
+.container_bar_search button[type="submit"] {
     width: 2.5rem;
     height: 2.5rem;
     margin: 10px;
     margin-left: 5px;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: var(--shadow);
+}
+
+.btn:active {
+    box-shadow: var(--low-shadow);
+    transition: -0.5s;
+}
+
+.container_bar_search .btn:active {
+    box-shadow: var(--low-shadow);
 }
 
 .container_list_pokemons {
